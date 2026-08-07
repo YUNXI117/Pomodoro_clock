@@ -32,7 +32,7 @@ static void update_time_value(
  * Allows the user to modify the total study duration
  * within a predefined range.
  *
- * @param config Timer configuration structure.
+ * @param config Timer configuration structure
  */
 void update_total_study_time(TimerConfig &config);
 

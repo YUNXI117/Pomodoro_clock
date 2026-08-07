@@ -197,7 +197,7 @@ void draw_sound_ui(SoundControl &sc, SoundVisualizer &vis)
     draw_rectangle(COLOR_GRAY, pre_button_x, pre_button_y, BTN_W, BTN_H);
 
     draw_text("Next >>", COLOR_BLACK, next_button_x + 10, next_button_y + 5);
-    draw_text("Pre >>", COLOR_BLACK, pre_button_x + 10, pre_button_y + 5);
+    draw_text("Pre <<", COLOR_BLACK, pre_button_x + 10, pre_button_y + 5);
 
     float vis_x = 0;
     // 40: sound name height -> 20   sort button y -> 20
@@ -213,7 +213,7 @@ void sort_playlist_by_name(SoundControl &sc)
     if (sc.playlist.size() <= 1)
         return;
 
-    // Insertion Sort by sounds' name (A–Z)
+    // Insertion Sort by sounds' name (A-Z)
     for (int i = 1; i < (int)sc.playlist.size(); i++)
     {
         Sound key = sc.playlist[i];
