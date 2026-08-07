@@ -11,7 +11,7 @@ void init_timer_tracker(TimerTracker &tracker)
     tracker.popoup_study_done = false;
     tracker.popup_break_done = false;
 
-    int interruption_count = 0;
+    tracker.interruption_count = 0;
 }
 
 void update_timer_tracker(
