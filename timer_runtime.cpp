@@ -103,7 +103,7 @@ void run_pomodoro_timer(PomodoroTimer &timer, TimerConfig &config, SoundControl 
                 handle_timer_events(timer, config, TimerEvent::START);
         }
 
-        // ESC → exit timer UI
+        // ESC -> exit timer UI
         if (key_typed(ESCAPE_KEY))
             break;
 

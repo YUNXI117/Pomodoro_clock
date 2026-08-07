@@ -17,7 +17,7 @@ std::string get_today_date();
 std::string format_time_mmss(int total_seconds);
 
 /**
- * @brief Control the hint to tell the user the timer state（RUNNING / PAUSED / IDLE）
+ * @brief Control the hint to tell the user the timer state (RUNNING / PAUSED / IDLE)
  * 
  * @param state The timers's state
  * @return std::string return the string Pause (SPAUSE) / Start (SPACE)
