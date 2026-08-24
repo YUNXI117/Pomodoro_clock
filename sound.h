@@ -1,7 +1,8 @@
-#pragma once 
-#include "splashKit.h"
+#pragma once
+#include <string>
 #include <vector>
-#include "sound_visualizer.h"
+
+#include "splashkit.h"
 
 // Forward declaration to avoid "undefined type" when compile the files
 // SoundVisualizer is defined in sound_visualize.h

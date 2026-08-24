@@ -10,6 +10,7 @@
 #include "timer_tracker.h"
 #include "timer_background_ui.h"
 #include "sound_visualizer.h"
+#include "ui.h"
 
 /**
  * @brief Describes a valid transition between menus.

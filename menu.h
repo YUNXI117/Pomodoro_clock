@@ -1,10 +1,9 @@
 #pragma once
 
-#include "ui.h"
+#include <string>
 #include <vector>
-#include "menu_action.h"
 
-using namespace std;
+#include "menu_action.h"
 
 /**
  * @brief Represents a single selectable item in a menu.
@@ -15,7 +14,7 @@ using namespace std;
  */
 struct MenuItem
 {
-    string text;        // Display text of the menu option
+    std::string text;   // Display text of the menu option
     MenuAction action;  // Action associated with this option
 };
 
@@ -28,7 +27,7 @@ struct MenuItem
  */
 struct Menu
 {
-    string name;                 // Name or title of the menu
+    std::string name;            // Name or title of the menu
     std::vector<MenuItem> items; // List of menu items
 };
 
@@ -42,7 +41,7 @@ struct Menu
  * @param text   Text displayed for this menu option.
  * @param action Action triggered when this option is selected.
  */
-void add_option(Menu &menu, const string &text, MenuAction action);
+void add_option(Menu &menu, const std::string &text, MenuAction action);
 
 /**
  * @brief Draw the menu on the screen.

@@ -43,11 +43,10 @@ void init_pomodoro_timer(PomodoroTimer &timer, const TimerConfig &config);
  *
  * @param timer    The Pomodoro timer to update
  * @param config   Configuration values for timer durations
- * @param tracker  Tracks completed sessions and timer statistics
  *
  * @return true if the timer reaches zero and triggers a TIME_UP event
  */
-bool update_pomodoro_timer(PomodoroTimer &timer,  const TimerConfig &config, TimerTracker &tracker);
+bool update_pomodoro_timer(PomodoroTimer &timer, const TimerConfig &config);
 
 /**
  * @brief Handle a timer event using the FSM transition table

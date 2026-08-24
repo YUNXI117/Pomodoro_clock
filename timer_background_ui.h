@@ -11,7 +11,7 @@
  */
 struct TimerBackground
 {
-    vector<bitmap> backgrounds;
+    std::vector<bitmap> backgrounds;
     int current_bg_index = 0;
 };
 

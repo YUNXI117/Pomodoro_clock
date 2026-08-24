@@ -30,7 +30,7 @@ void init_pomodoro_timer(PomodoroTimer &timer, const TimerConfig &config)
     timer.remaining_seconds = config.pomodoro_study_minutes * 60;
 }
 
-bool update_pomodoro_timer(PomodoroTimer &timer, const TimerConfig &config, TimerTracker &tracker)
+bool update_pomodoro_timer(PomodoroTimer &timer, const TimerConfig &config)
 {
     static double last_tick = current_ticks();
 
@@ -108,7 +108,7 @@ void run_pomodoro_timer(PomodoroTimer &timer, TimerConfig &config, SoundControl 
             break;
 
         // 2. Tick timer(1 second)
-        bool ticked = update_pomodoro_timer(timer, config, tracker);
+        bool ticked = update_pomodoro_timer(timer, config);
 
         if(ticked)
         {
@@ -125,7 +125,7 @@ void run_pomodoro_timer(PomodoroTimer &timer, TimerConfig &config, SoundControl 
 
         draw_sound_ui(sc, vis);
 
-        draw_timer_ui(timer, config);
+        draw_timer_ui(timer);
 
         draw_tracker_popup(tracker);
         draw_interruption_counter(timer, tracker);

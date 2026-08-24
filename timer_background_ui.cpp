@@ -1,6 +1,5 @@
 #include "timer_background_ui.h"
-#include <vector>
-#include "SplashKit.h"
+#include "splashkit.h"
 
 void load_timer_backgrounds(TimerBackground &bg)
 {
@@ -39,7 +38,7 @@ void draw_background_switch_button(TimerBackground &bg)
         {
             bg.current_bg_index++;
 
-            if(bg.current_bg_index >= bg.backgrounds.size())
+            if(bg.current_bg_index >= static_cast<int>(bg.backgrounds.size()))
             {
                 bg.current_bg_index = 0;
             }

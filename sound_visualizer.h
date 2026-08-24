@@ -1,7 +1,8 @@
 #pragma once
-#include "splashkit.h"
+#include <string>
 #include <vector>
-#include "sound.h"
+
+#include "splashkit.h"
 
 // Forward declaration to avoid "undefined type" when compile the files.
 // SoundControl is defined in sound.h

@@ -1,7 +1,5 @@
-#include "splashKit.h"
 #include "sound.h"
 #include "ui.h"
-#include <vector>
 #include "sound_visualizer.h"
 
 void init_sound_control(SoundControl &sc)
@@ -30,7 +28,7 @@ void init_sound_control(SoundControl &sc)
 
     if (!sc.enabled)
     {
-        draw_warning("Some source do not load !");
+        draw_warning("Some resources failed to load!");
         return;
     }
 
@@ -141,7 +139,7 @@ void update_sound_control_and_visualizer(SoundControl &sc, SoundVisualizer &vis)
                 sc.playing = false;
             }
 
-            // Begain sort
+            // Begin sort
             sort_playlist_by_name(sc);
 
             init_visualizer(vis, sc);
@@ -163,7 +161,7 @@ void draw_sound_ui(SoundControl &sc, SoundVisualizer &vis)
     float sound_name_x = 0;
     float sound_name_y = icon_y - 40;
 
-    std::string sound_name_text = "Now palying: " + sc.playlist[sc.current_index].name;
+    std::string sound_name_text = "Now playing: " + sc.playlist[sc.current_index].name;
 
     draw_text(sound_name_text, COLOR_BLACK, sound_name_x, sound_name_y);
 
@@ -179,8 +177,6 @@ void draw_sound_ui(SoundControl &sc, SoundVisualizer &vis)
     draw_text("Sort sounds by name: A-Z", COLOR_BLACK, sort_button_x + 10, sort_button_y + 5);
 
     // Draw pre and next button
-    std::string text_previous = "Pre <<";
-
     const int BTN_W = 100;
     const int BTN_H = bitmap_height(icon) / 2;
 
@@ -197,7 +193,7 @@ void draw_sound_ui(SoundControl &sc, SoundVisualizer &vis)
     draw_rectangle(COLOR_GRAY, pre_button_x, pre_button_y, BTN_W, BTN_H);
 
     draw_text("Next >>", COLOR_BLACK, next_button_x + 10, next_button_y + 5);
-    draw_text("Pre <<", COLOR_BLACK, pre_button_x + 10, pre_button_y + 5);
+    draw_text("Prev <<", COLOR_BLACK, pre_button_x + 10, pre_button_y + 5);
 
     float vis_x = 0;
     // 40: sound name height -> 20   sort button y -> 20

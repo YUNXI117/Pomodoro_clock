@@ -40,7 +40,7 @@ std::string control_hint(TimerState state)
     }
 }
 
-bool draw_timer_ui(PomodoroTimer &timer, const TimerConfig &config)
+bool draw_timer_ui(PomodoroTimer &timer)
 {
 
     if(timer.phase == TimerPhase::STUDY)

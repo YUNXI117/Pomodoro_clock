@@ -1,5 +1,7 @@
 #pragma once
-#include "timer_runtime.h"
+#include <string>
+
+#include "timer_types.h"
 
 /**
  * @brief Get the today date and format it into YYYY:mm:dd
@@ -34,9 +36,8 @@ std::string control_hint(TimerState state);
  * - Handle ESC to exit timer view
  *
  * @param timer Pomodoro timer runtime state
- * @param config Timer configuration (study/break durations)
  * @return true  Continue showing timer UI
  * @return false Exit timer UI (back to menu)
  */
-bool draw_timer_ui(PomodoroTimer &timer, const TimerConfig &config);
+bool draw_timer_ui(PomodoroTimer &timer);
 

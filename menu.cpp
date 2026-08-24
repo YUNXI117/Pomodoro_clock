@@ -18,7 +18,7 @@ bool draw_menu(const Menu &menu)
     float x = screen_width() / 4.0f;
     float y = screen_height() / 4.0f;
 
-    for (int i = 0; i < menu.items.size(); i++)
+    for (size_t i = 0; i < menu.items.size(); i++)
     {
         string label = to_string(i + 1) + ". " + menu.items[i].text;
         int height = text_height(label, "main_font", FONT_SIZE);
@@ -45,12 +45,12 @@ bool draw_menu(const Menu &menu)
 
 MenuAction handle_menu(const Menu &menu)
 {
-    for (int i = 0; i < menu.items.size(); i++)
+    for (size_t i = 0; i < menu.items.size(); i++)
     {
-        key_code key = static_cast<key_code>(NUM_1_KEY + i);
+        key_code key = static_cast<key_code>(NUM_1_KEY + static_cast<int>(i));
         if (key_typed(key))
         {
-            return menu.items[i].action; 
+            return menu.items[i].action;
         }
     }
     return MenuAction::ACTION_NONE;
