@@ -1,125 +1,1 @@
-# Pomodoro Clock
-
-A desktop Pomodoro timer built with **C++** and **SplashKit**. The application combines configurable focus sessions, menu-based navigation, sound playback, background switching, progress tracking, and simple audio visualization.
-
-## Description
-
-Pomodoro Clock is a personal productivity application designed to support focused study sessions. Users can configure study and break durations, start or pause a Pomodoro session, switch visual backgrounds, play background music, and track interruptions during study time.
-
-The project was originally built as a university project and has since been reorganized into a clearer C++ project structure for portfolio review and future maintenance.
-
-## Features
-
-- Configurable total study time and break time
-- Configurable Pomodoro study and break session length
-- Start, pause, and automatic study/break transitions
-- Menu-based navigation using keyboard input
-- Study progress tracking and completion popups
-- Interruption counter for study sessions
-- Background image switching
-- Music playback with next/previous controls
-- Playlist sorting by song name
-- WAV-based audio visualization
-
-## Tech Stack
-
-- C++
-- SplashKit
-- PowerShell build script
-
-## Project Structure
-
-```text
-Pomodoro_clock/
-├── src/
-│   ├── main.cpp
-│   ├── menu/
-│   ├── sound/
-│   ├── timer/
-│   └── ui/
-├── include/
-│   └── pomodoro/
-│       ├── menu/
-│       ├── sound/
-│       ├── timer/
-│       └── ui/
-├── images/
-├── sounds/
-├── Wav/
-├── build.ps1
-└── README.md
-```
-
-## Visuals
-
-Screenshots or a short demo video can be added for portfolio use. Recommended screenshots:
-
-- Main menu
-- Timer running screen
-- Settings screen
-- Music and visualizer controls
-
-## Requirements
-
-- Windows
-- MSYS2 / MinGW toolchain
-- `clang++`
-- SplashKit installed and available to the compiler
-
-## Installation
-
-Clone the repository:
-
-```powershell
-git clone https://github.com/YUNXI117/Pomodoro_clock.git
-cd Pomodoro_clock
-```
-
-Make sure SplashKit is installed and your terminal can access `clang++`.
-
-## Build
-
-Run this from the project root:
-
-```powershell
-./build.ps1
-```
-
-This compiles all `.cpp` files under `src/` and outputs:
-
-```text
-test.exe
-```
-
-## Usage
-
-Run the application:
-
-```powershell
-./test.exe
-```
-
-Basic controls:
-
-- Number keys select menu options
-- `SPACE` starts or pauses the timer
-- `ESC` returns from the timer screen
-- Mouse controls the sound button, playlist controls, background button, and interruption counter
-
-## Roadmap
-
-Possible future improvements:
-
-- Add persistent settings saved to a file
-- Add session history export
-- Add a cleaner graphical layout for sound controls
-- Replace hard-coded resource paths with a resource manager
-- Add CMake support for cross-platform builds
-
-## Project Status
-
-The project is functional and has been reorganized into a clearer portfolio-friendly structure. Further work would focus on UI polish, persistence, and build tooling.
-
-## Academic Integrity
-
-This project may include coursework-derived work. If used for public portfolio or recruitment purposes, confirm with the relevant teaching staff before sharing the full source code publicly.
+﻿# Pomodoro ClockA desktop Pomodoro timer built with **C++** and **SplashKit**. The application combines configurable focus sessions, menu-based navigation, sound playback, background switching, progress tracking, and simple audio visualization.## DescriptionPomodoro Clock is a personal productivity application designed to support focused study sessions. Users can configure study and break durations, start or pause a Pomodoro session, switch visual backgrounds, play background music, and track interruptions during study time.The project was originally built as a university project and has since been reorganized into a clearer C++ project structure for portfolio review and future maintenance.## Features- Configurable total study time and break time- Configurable Pomodoro study and break session length- Start, pause, and automatic study/break transitions- Menu-based navigation using keyboard input- Study progress tracking and completion popups- Interruption counter for study sessions- Background image switching- Music playback with next/previous controls- Playlist sorting by song name- WAV-based audio visualization## Tech Stack- C++- SplashKit- PowerShell build script## Project Structure```textPomodoro_clock/├── src/│   ├── main.cpp│   ├── menu/│   ├── sound/│   ├── timer/│   └── ui/├── include/│   └── pomodoro/│       ├── menu/│       ├── sound/│       ├── timer/│       └── ui/├── images/├── sounds/├── Wav/├── build.ps1└── README.md```## VisualsScreenshots or a short demo video can be added for portfolio use. Recommended screenshots:- Main menu- Timer running screen- Settings screen- Music and visualizer controls## Requirements- Windows- MSYS2 / MinGW toolchain- `clang++`- SplashKit installed and available to the compiler## InstallationClone the repository:```powershellgit clone https://github.com/YUNXI117/Pomodoro_clock.gitcd Pomodoro_clock```Make sure SplashKit is installed and your terminal can access `clang++`.## BuildRun this from the project root:```powershell./build.ps1```This compiles all `.cpp` files under `src/` and outputs:```texttest.exe```## UsageRun the application:```powershell./test.exe```Basic controls:- Number keys select menu options- `SPACE` starts or pauses the timer- `ESC` returns from the timer screen- Mouse controls the sound button, playlist controls, background button, and interruption counter## RoadmapPossible future improvements:- Add persistent settings saved to a file- Add session history export- Add a cleaner graphical layout for sound controls- Replace hard-coded resource paths with a resource manager- Add CMake support for cross-platform builds## Project StatusThe project is functional and has been reorganized into a clearer portfolio-friendly structure. Further work would focus on UI polish, persistence, and build tooling.
