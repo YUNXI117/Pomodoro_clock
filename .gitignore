@@ -1,3 +1,6 @@
 *.exe
 *.log
-
+*.o
+*.obj
+build/
+.vscode/ipch/
